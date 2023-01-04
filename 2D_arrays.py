@@ -6,10 +6,9 @@
 # random numbers between 1 and 50 and display them to the user.
 # It then places the numbers into the 2D array
 import math
-
-
 import random
 import constants
+
 
 # Function to calculate the average of all values in the array
 def calc_average(array, row, column):
@@ -29,7 +28,7 @@ def calc_average(array, row, column):
 
 
 def main():
-
+    MAX_NUM = 50
     # get 2D array size and try catch
     rows_str = input("How many row would you like: ")
 
@@ -52,7 +51,7 @@ def main():
     # Populate array with random numbers
     for i in range(rows):
         for j in range(columns):
-            random_number = random.randint(constants.MIN_NUM, constants.MAX_NUM)
+            random_number = random.randint(constants.MIN_NUM, MAX_NUM)
             array[i][j] = random_number
             print(random_number, end="\t")
         print()
